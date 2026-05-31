@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green Nirv AI Solutions — Building AI Products That Matter</title>
+  <meta name="description" content="Green Nirv AI Solutions builds practical, AI-powered products for real businesses and real people. Based in Dallas, TX." />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,300;1,9..144,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:        #0b1120;
+      --navy2:       #111a2e;
+      --navy3:       #1a2540;
+      --navy4:       #243050;
+      --gold:        #c9a84c;
+      --gold-light:  #e8c97a;
+      --gold-pale:   #f5e9c8;
+      --white:       #ffffff;
+      --off-white:   #f7f5ef;
+      --text:        #e8e4d8;
+      --text-muted:  #8a93a8;
+      --text-dim:    #3d4a62;
+      --border:      #1e2d4a;
+      --radius:      20px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--navy);
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    /* ── SUBTLE TEXTURE ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 20% 10%, rgba(201,168,76,0.05) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 80% 80%, rgba(11,17,32,0) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 200;
+      width: calc(100% - 48px);
+      max-width: 1200px;
+      background: rgba(11,17,32,0.85);
+      backdrop-filter: blur(24px);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-pill {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--navy);
+      font-family: 'Fraunces', serif;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 5px 14px;
+      border-radius: 100px;
+      letter-spacing: 0.04em;
+    }
+
+    .logo-name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 7px 16px;
+      border-radius: 100px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      background: var(--navy3);
+      color: var(--text);
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light)) !important;
+      color: var(--navy) !important;
+      font-weight: 600 !important;
+      transition: opacity 0.2s, transform 0.2s !important;
+    }
+
+    .nav-cta:hover {
+      opacity: 0.9 !important;
+      transform: translateY(-1px) !important;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      padding: 150px 48px 100px;
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 40px;
+      animation: fadeUp 0.9s ease both;
+    }
+
+    .eyebrow-dot {
+      width: 8px; height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: blink 2.5s infinite;
+      box-shadow: 0 0 12px rgba(201,168,76,0.6);
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .eyebrow-text {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .hero-headline {
+      font-family: 'Fraunces', serif;
+      font-weight: 800;
+      font-size: clamp(52px, 8.5vw, 112px);
+      line-height: 0.93;
+      letter-spacing: -0.04em;
+      margin-bottom: 44px;
+      max-width: 880px;
+      animation: fadeUp 0.9s 0.1s ease both;
+    }
+
+    .hero-headline .gold { color: var(--gold-light); }
+    .hero-headline .dim  { color: var(--text-dim); }
+    .hero-headline .ital { font-style: italic; }
+
+    .hero-bottom {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+      animation: fadeUp 0.9s 0.2s ease both;
+    }
+
+    .hero-desc {
+      max-width: 420px;
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--navy);
+      padding: 15px 32px;
+      border-radius: 100px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 8px 32px rgba(201,168,76,0.25);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 48px rgba(201,168,76,0.35);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      padding: 15px 32px;
+      border-radius: 100px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--gold);
+      background: rgba(201,168,76,0.05);
+    }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--navy2);
+    }
+
+    .stats-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 48px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .stat-item {
+      padding: 36px 24px;
+      border-right: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .stat-item:last-child { border-right: none; }
+
+    .stat-num {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 40px;
+      color: var(--gold-light);
+      display: block;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 400;
+    }
+
+    /* ── MARQUEE ── */
+    .marquee-wrap {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      padding: 16px 0;
+      overflow: hidden;
+    }
+
+    .marquee-track {
+      display: flex;
+      animation: scroll 30s linear infinite;
+      white-space: nowrap;
+    }
+
+    .marquee-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      padding: 0 32px;
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 15px;
+      color: rgba(11,17,32,0.6);
+    }
+
+    .marquee-sep {
+      color: var(--navy);
+      font-style: normal;
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      opacity: 0.4;
+    }
+
+    .marquee-item strong {
+      font-style: normal;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(11,17,32,0.12);
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
+
+    @keyframes scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ── SECTIONS ── */
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 110px 48px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gold);
+      margin-bottom: 52px;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 28px;
+      height: 1.5px;
+      background: var(--gold);
+    }
+
+    /* ── ABOUT ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .about-headline {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: clamp(36px, 4vw, 58px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 32px;
+    }
+
+    .about-headline em {
+      font-style: italic;
+      color: var(--text-dim);
+    }
+
+    .about-body p {
+      font-size: 17px;
+      line-height: 1.85;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .founder-card {
+      background: var(--navy2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px;
+      position: sticky;
+      top: 100px;
+    }
+
+    .founder-avatar {
+      width: 64px; height: 64px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fraunces', serif;
+      font-weight: 800;
+      font-size: 22px;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .founder-card h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 22px;
+      margin-bottom: 4px;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .founder-title {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .founder-card p {
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .founder-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: var(--navy3);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 5px 13px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .tag-gold {
+      background: rgba(201,168,76,0.1);
+      border-color: rgba(201,168,76,0.3);
+      color: var(--gold-light);
+    }
+
+    /* ── PRODUCTS ── */
+    .products-wrap {
+      background: var(--navy2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      z-index: 1;
+    }
+
+    .products-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 110px 48px;
+    }
+
+    .products-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 56px;
+    }
+
+    .products-header h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 800;
+      font-size: clamp(36px, 5vw, 68px);
+      letter-spacing: -0.04em;
+      line-height: 0.95;
+      color: var(--white);
+    }
+
+    .products-header h2 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .products-header p {
+      max-width: 300px;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .product-card {
+      border-radius: var(--radius);
+      padding: 44px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.3);
+    }
+
+    .product-card-farm {
+      background: var(--navy3);
+      border: 1px solid var(--border);
+    }
+
+    .product-card-dress {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    }
+
+    .product-card-farm::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .product-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 32px;
+    }
+
+    .product-status::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .product-card-farm .product-status {
+      background: rgba(201,168,76,0.12);
+      color: var(--gold-light);
+      border: 1px solid rgba(201,168,76,0.2);
+    }
+
+    .product-card-dress .product-status {
+      background: rgba(11,17,32,0.12);
+      color: var(--navy);
+    }
+
+    .product-emoji {
+      font-size: 52px;
+      display: block;
+      margin-bottom: 20px;
+      line-height: 1;
+    }
+
+    .product-card h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 800;
+      font-size: 36px;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .product-card-farm h3 { color: var(--white); }
+    .product-card-dress h3 { color: var(--navy); }
+
+    .product-card > p {
+      font-size: 15px;
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+
+    .product-card-farm > p { color: var(--text-muted); }
+    .product-card-dress > p { color: rgba(11,17,32,0.65); }
+
+    .product-features {
+      list-style: none;
+      margin-bottom: 36px;
+    }
+
+    .product-features li {
+      font-size: 14px;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid;
+    }
+
+    .product-card-farm .product-features li {
+      color: var(--text-muted);
+      border-color: var(--border);
+    }
+
+    .product-card-dress .product-features li {
+      color: var(--navy2);
+      border-color: rgba(11,17,32,0.15);
+    }
+
+    .product-features li:last-child { border-bottom: none; }
+
+    .product-features li::before {
+      content: '→';
+      font-size: 12px;
+      flex-shrink: 0;
+      opacity: 0.4;
+    }
+
+    .product-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: gap 0.2s;
+    }
+
+    .product-card-farm .product-cta { color: var(--gold-light); }
+    .product-card-dress .product-cta { color: var(--navy); }
+    .product-cta:hover { gap: 14px; }
+
+    /* ── TECH ── */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 0;
+    }
+
+    .tech-card {
+      background: var(--navy2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 26px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .tech-card:hover {
+      border-color: rgba(201,168,76,0.4);
+      transform: translateY(-2px);
+    }
+
+    .tech-icon {
+      font-size: 26px;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .tech-card h4 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+      color: var(--text);
+    }
+
+    .tech-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ── CONTACT ── */
+    .contact-wrap {
+      background: var(--navy2);
+      border-top: 1px solid var(--border);
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 110px 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .contact-left h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 800;
+      font-size: clamp(36px, 4vw, 64px);
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 24px;
+      color: var(--white);
+    }
+
+    .contact-left h2 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .contact-left p {
+      font-size: 17px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 36px;
+    }
+
+    .contact-card {
+      background: var(--navy);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 22px 28px;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.2s;
+    }
+
+    .contact-row:last-child { border-bottom: none; }
+    .contact-row:hover { background: var(--navy3); }
+
+    .contact-icon {
+      width: 44px; height: 44px;
+      background: var(--navy3);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .contact-info label {
+      display: block;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      margin-bottom: 3px;
+    }
+
+    .contact-info a,
+    .contact-info span {
+      font-size: 15px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.2s;
+    }
+
+    .contact-info a:hover { color: var(--gold-light); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      border-top: 1px solid var(--border);
+      padding: 40px 48px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-pill {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--navy);
+      font-family: 'Fraunces', serif;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 14px;
+      border-radius: 100px;
+    }
+
+    .footer-tagline {
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--gold); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { width: calc(100% - 24px); padding: 10px 14px; }
+      .nav-links li:not(:last-child) { display: none; }
+      .hero { padding: 120px 24px 60px; }
+      .hero-bottom { flex-direction: column; align-items: flex-start; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .stat-item:nth-child(2) { border-right: none; }
+      .section { padding: 70px 24px; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .founder-card { position: static; }
+      .products-inner { padding: 70px 24px; }
+      .products-header { flex-direction: column; align-items: flex-start; }
+      .products-grid { grid-template-columns: 1fr; }
+      .tech-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-inner { grid-template-columns: 1fr; gap: 40px; padding: 70px 24px; }
+      footer { padding: 32px 24px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <span class="logo-pill">GN · AI</span>
+      <span class="logo-name">Green Nirv AI Solutions</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#technology">Technology</a></li>
+      <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-dot"></span>
+      <span class="eyebrow-text">Dallas, Texas · AI Product Studio · Est. 2026</span>
+    </div>
+    <h1 class="hero-headline">
+      <span class="dim ital">Practical</span> AI.<br />
+      <span class="gold">Real</span> products.<br />
+      <span class="dim">Zero fluff.</span>
+    </h1>
+    <div class="hero-bottom">
+      <p class="hero-desc">
+        We build intelligent software that solves real problems — for local businesses,
+        farmers, and consumers across Texas and beyond.
+      </p>
+      <div class="hero-actions">
+        <a href="#products" class="btn-gold">See Our Products →</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <span class="stat-num">14+</span>
+        <span class="stat-label">Years Cloud Experience</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">2</span>
+        <span class="stat-label">Products Shipping</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">AWS</span>
+        <span class="stat-label">Serverless Infrastructure</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">TX</span>
+        <span class="stat-label">Dallas Based & Built</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span class="marquee-item">AI-Powered Farm Delivery Management <strong>Live Now</strong></span>
+      <span class="marquee-sep">·</span>
+      <span class="marquee-item">AWS Serverless Architecture <strong>Production Grade</strong></span>
+      <span class="marquee-sep">·</span>
+      <span class="marquee-item">Dressup.ai — Outfit Intelligence <strong>Coming Soon</strong></span>
+      <span class="marquee-sep">·</span>
+      <span class="marquee-item">Built in Dallas, Texas <strong>Est. 2026</strong></span>
+      <span class="marquee-sep">·</span>
+      <span class="marquee-item">14+ Years AWS Expertise <strong>Founder Led</strong></span>
+      <span class="marquee-sep">·</span>
+      <span class="marquee-item">AI-Powered Farm Delivery Management <strong>Live Now</strong></span>
+      <span class="marquee-sep">·</span>
+      <span class="marquee-item">AWS Serverless Architecture <strong>Production Grade</strong></span>
+      <span class="marquee-sep">·</span>
+      <span class="marquee-item">Dressup.ai — Outfit Intelligence <strong>Coming Soon</strong></span>
+      <span class="marquee-sep">·</span>
+      <span class="marquee-item">Built in Dallas, Texas <strong>Est. 2026</strong></span>
+      <span class="marquee-sep">·</span>
+      <span class="marquee-item">14+ Years AWS Expertise <strong>Founder Led</strong></span>
+      <span class="marquee-sep">·</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-label reveal">Who We Are</div>
+    <div class="about-grid">
+      <div class="about-body">
+        <h2 class="about-headline reveal">
+          AI built for the<br />
+          real world —<br />
+          <em>not the hype cycle.</em>
+        </h2>
+        <p class="reveal">Green Nirv AI Solutions is a Dallas-based AI product company. We don't build AI for the sake of AI — every product we ship solves a tangible, real-world problem for real people.</p>
+        <p class="reveal">Our products replace broken manual workflows with intelligent, beautifully designed software. From local farms running on WhatsApp and Excel spreadsheets, to everyday consumers who want to look their best — we find the friction and build the solution.</p>
+        <p class="reveal reveal-delay-1">Every product is built on AWS — serverless, scalable, and production-grade from day one.</p>
+      </div>
+      <div>
+        <div class="founder-card reveal">
+          <div class="founder-avatar">SP</div>
+          <h3>Sravan Periyathambi</h3>
+          <p class="founder-title">Founder & CEO · Green Nirv AI Solutions LLC</p>
+          <p>14+ years in cloud architecture and enterprise AI. Former AWS Solutions Architect specializing in GenAI, RAG systems, and large-scale cloud migrations. Now building products that matter.</p>
+          <div class="founder-tags">
+            <span class="tag tag-gold">AWS Certified</span>
+            <span class="tag tag-gold">Solutions Architect</span>
+            <span class="tag">AI / ML</span>
+            <span class="tag">Dallas, TX</span>
+            <span class="tag">Founder Led</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <div class="products-wrap" id="products">
+    <div class="products-inner">
+      <div class="products-header reveal">
+        <h2>What we're<br /><em>shipping.</em></h2>
+        <p>Real software. Real users. Real impact. Two products building right now.</p>
+      </div>
+      <div class="products-grid">
+
+        <!-- Farm Delivery OS -->
+        <div class="product-card product-card-farm reveal">
+          <div class="product-status">● Live · SaaS Platform</div>
+          <span class="product-emoji">🌾</span>
+          <h3>Farm<br />Delivery OS</h3>
+          <p>A full-stack AI delivery management platform for local farms. Currently live with a Dallas-area farm — replacing WhatsApp orders, manual Excel van loading, and screenshot-based payments with one intelligent system.</p>
+          <ul class="product-features">
+            <li>Multi-role app — customer, owner, driver, admin</li>
+            <li>Stripe + cash QR payment flows</li>
+            <li>Live van tracking via AWS IoT Core</li>
+            <li>Driver QR scanner with AWS Polly voice readout</li>
+            <li>Weekly analytics & inventory dashboard</li>
+          </ul>
+          <a href="#contact" class="product-cta">Bring this to your farm →</a>
+        </div>
+
+        <!-- Dressup.ai -->
+        <div class="product-card product-card-dress reveal reveal-delay-1">
+          <div class="product-status">● Coming Soon · iOS & Android</div>
+          <span class="product-emoji">👗</span>
+          <h3>Dressup<br />.ai</h3>
+          <p>AI-powered outfit recommendations for every occasion. Tell us where you're going — we tell you exactly what to wear. Personalized, intelligent, and built from your own wardrobe.</p>
+          <ul class="product-features">
+            <li>Event-first outfit planning</li>
+            <li>AI wardrobe analysis & styling</li>
+            <li>Personalized recommendations</li>
+            <li>Powered by Claude AI + Amazon Nova</li>
+            <li>iOS and Android</li>
+          </ul>
+          <a href="#contact" class="product-cta">Join the waitlist →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- TECH -->
+  <section class="section" id="technology">
+    <div class="section-label reveal">How We Build</div>
+    <div class="tech-grid">
+      <div class="tech-card reveal">
+        <span class="tech-icon">⚡</span>
+        <h4>AWS Serverless</h4>
+        <p>Lambda, DynamoDB, API Gateway — production-grade infrastructure, zero server management.</p>
+      </div>
+      <div class="tech-card reveal reveal-delay-1">
+        <span class="tech-icon">🧠</span>
+        <h4>Claude AI + Amazon Nova</h4>
+        <p>Anthropic Claude and Amazon Nova power the intelligence layer across all our products.</p>
+      </div>
+      <div class="tech-card reveal reveal-delay-2">
+        <span class="tech-icon">📱</span>
+        <h4>React + Vite</h4>
+        <p>Fast, modern frontends. Mobile-first, accessible, and polished across every device.</p>
+      </div>
+      <div class="tech-card reveal reveal-delay-3">
+        <span class="tech-icon">🔐</span>
+        <h4>Amazon Cognito</h4>
+        <p>Enterprise-grade authentication and secure user management built into every product.</p>
+      </div>
+      <div class="tech-card reveal">
+        <span class="tech-icon">📍</span>
+        <h4>IoT + Location</h4>
+        <p>AWS IoT Core and Amazon Location Service for real-time tracking experiences.</p>
+      </div>
+      <div class="tech-card reveal reveal-delay-1">
+        <span class="tech-icon">💳</span>
+        <h4>Stripe Payments</h4>
+        <p>Seamless online payment processing with custom cash-pay QR fallback flows.</p>
+      </div>
+      <div class="tech-card reveal reveal-delay-2">
+        <span class="tech-icon">🔊</span>
+        <h4>AWS Polly</h4>
+        <p>Text-to-speech voice readouts for hands-free, field-optimized driver experiences.</p>
+      </div>
+      <div class="tech-card reveal reveal-delay-3">
+        <span class="tech-icon">☁️</span>
+        <h4>AWS Amplify</h4>
+        <p>Continuous deployment and CDN hosting. Push code, go live. Simple as that.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <div class="contact-wrap" id="contact">
+    <div class="contact-inner">
+      <div class="contact-left reveal">
+        <h2>Let's build<br />something <em>great.</em></h2>
+        <p>Whether you're a farm owner ready to modernize, a business with an AI problem to solve, or a potential partner — we want to hear from you.</p>
+        <a href="mailto:hello@greennirvai.com" class="btn-gold">Send Us a Message →</a>
+      </div>
+      <div class="contact-card reveal reveal-delay-1">
+        <div class="contact-row">
+          <div class="contact-icon">📧</div>
+          <div class="contact-info">
+            <label>Email</label>
+            <a href="mailto:hello@greennirvai.com">hello@greennirvai.com</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">🌐</div>
+          <div class="contact-info">
+            <label>Website</label>
+            <a href="https://greennirvai.com">greennirvai.com</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">📍</div>
+          <div class="contact-info">
+            <label>Location</label>
+            <span>McKinney · Dallas, Texas</span>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">🏢</div>
+          <div class="contact-info">
+            <label>Legal Entity</label>
+            <span>Green Nirv AI Solutions LLC</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-pill">GN · AI</span>
+        <span class="footer-tagline">Building AI products that matter.</span>
+      </div>
+      <p>© 2026 Green Nirv AI Solutions LLC · Dallas, TX</p>
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#technology">Technology</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => io.observe(el));
+  </script>
+
+</body>
+</html>
