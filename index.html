@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Green Nirv AI Solutions | AI Products and Applied Automation</title>
+  <title>Green Nirv AI Solutions | AI Solutions, App Development and Automation</title>
   <meta
     name="description"
-    content="Green Nirv AI Solutions builds production-ready AI products, internal tools, and automation systems for farms, local businesses, and modern operators."
+    content="Green Nirv AI Solutions is an AI solutions company building production-ready web apps, mobile apps, SaaS products, and automation systems for farms, businesses, and modern operators."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -666,6 +666,32 @@
       text-decoration: none;
     }
 
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .service-card {
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(255, 255, 255, 0.92);
+      box-shadow: 0 18px 50px rgba(17, 28, 46, 0.08);
+    }
+
+    .service-card h4 {
+      font-size: 18px;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--slate);
+      line-height: 1.75;
+      font-size: 14px;
+    }
+
     .capability-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -884,6 +910,10 @@
       .capability-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 820px) {
@@ -942,6 +972,7 @@
       }
 
       .capability-grid,
+      .services-grid,
       .stack-grid {
         grid-template-columns: 1fr;
       }
@@ -957,7 +988,7 @@
             <span class="brand-mark">GN</span>
             <span class="brand-copy">
               <strong>Green Nirv AI Solutions</strong>
-              <span>Applied AI products and intelligent automation</span>
+              <span>AI solutions, app development, and intelligent automation</span>
             </span>
           </a>
           <ul class="nav-links">
@@ -976,11 +1007,11 @@
           <div class="hero-copy reveal">
             <div>
               <div class="eyebrow">Dallas, Texas · Founder led · Production minded</div>
-              <h1 class="hero-title">AI that feels <em>useful</em>, grounded, and ready for the real world.</h1>
+              <h1 class="hero-title">AI solutions and apps built for the <em>real world</em>.</h1>
               <p class="hero-subtitle">
-                Green Nirv AI Solutions designs and ships practical AI products for operators who need real outcomes,
-                not demo theater. We turn messy workflows into reliable software, modern customer experiences, and
-                scalable internal systems.
+                Green Nirv AI Solutions is an AI solutions company that designs and builds practical web applications,
+                mobile apps, SaaS products, and automation systems for operators who need real outcomes. We turn messy
+                workflows into reliable software, modern customer experiences, and scalable internal systems.
               </p>
               <div class="hero-actions">
                 <a href="#products" class="button">Explore Our Products</a>
@@ -1010,7 +1041,7 @@
               <h2 class="panel-title">Building software where operations are still held together by spreadsheets, chat threads, and manual follow-up.</h2>
               <p class="panel-text">
                 We look for industries where people are doing important work with fragile systems. That is usually where
-                AI and automation can create immediate value.
+                AI solutions, software, and automation can create immediate value.
               </p>
               <div class="signal-list">
                 <div class="signal-item">Live farm delivery operations modernized with a purpose-built platform</div>
@@ -1037,33 +1068,34 @@
           <div class="section-header reveal">
             <div>
               <div class="section-label">Who We Are</div>
-              <h2 class="section-title">We build AI products with operating discipline.</h2>
+              <h2 class="section-title">We build AI solutions with operating discipline.</h2>
             </div>
             <p class="section-text">
               The goal is simple: ship systems people can trust. That means clear workflows, dependable infrastructure,
-              thoughtful product design, and AI that actually supports the job instead of complicating it.
+              thoughtful app development, and AI that actually supports the job instead of complicating it.
             </p>
           </div>
 
           <div class="trust-grid">
             <div class="trust-story reveal delay-1">
               <p>
-                Green Nirv AI Solutions is a Dallas-area AI product company focused on applied intelligence. We build for
-                teams that need better throughput, cleaner decision-making, and less manual coordination.
+                Green Nirv AI Solutions is a Dallas-area AI solutions company focused on applied intelligence. We build
+                web apps, mobile apps, SaaS platforms, and internal tools for teams that need better throughput,
+                cleaner decision-making, and less manual coordination.
               </p>
               <p>
-                Instead of leading with hype, we lead with implementation. We identify the friction, shape the workflow,
-                and engineer the product around the reality of how people already work.
+                Instead of leading with hype, we lead with implementation. We identify the friction, shape the
+                workflow, and engineer the software around the reality of how people already work.
               </p>
               <p>
-                That approach is already showing up in agriculture logistics and consumer personalization, and it is the
-                same lens we bring to every future product and client engagement.
+                That approach is already showing up in agriculture logistics and consumer app development, and it is
+                the same lens we bring to every future product and client engagement.
               </p>
 
               <div class="insight-band">
                 <div class="insight">
                   <strong>Applied over abstract</strong>
-                  <span>We favor clear business outcomes over novelty for novelty’s sake.</span>
+                  <span>We favor clear business outcomes over novelty for novelty's sake.</span>
                 </div>
                 <div class="insight">
                   <strong>Modern from the start</strong>
@@ -1155,12 +1187,46 @@
         <div class="container">
           <div class="section-header reveal">
             <div>
-              <div class="section-label">Capabilities</div>
+              <div class="section-label">Services</div>
+              <h2 class="section-title">What the company provides.</h2>
+            </div>
+            <p class="section-text">
+              Green Nirv AI Solutions operates as an AI solutions and app development company with offerings across
+              software products, SaaS platforms, workflow automation, and consumer applications.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <div class="service-card reveal delay-1">
+              <h4>AI Solutions</h4>
+              <p>Applied AI systems for decision support, personalization, workflow intelligence, and operational automation.</p>
+            </div>
+            <div class="service-card reveal delay-2">
+              <h4>Web App Development</h4>
+              <p>Modern web applications and B2B SaaS platforms designed for operational reliability and day-to-day usability.</p>
+            </div>
+            <div class="service-card reveal delay-3">
+              <h4>Mobile App Development</h4>
+              <p>Consumer and business mobile app experiences built for practical use cases on iOS and Android.</p>
+            </div>
+            <div class="service-card reveal">
+              <h4>Automation Systems</h4>
+              <p>Internal tools, integrations, and workflow automation that reduce manual work and improve execution.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <div>
+              <div class="section-label">AI Solutions and Capabilities</div>
               <h2 class="section-title">The stack behind the delivery.</h2>
             </div>
             <p class="section-text">
-              The technical foundation is deliberately modern and practical: fast iteration, low operational overhead,
-              secure user flows, and enough flexibility to integrate AI where it genuinely helps.
+              Our delivery model supports AI solutions across B2B SaaS, consumer apps, internal tools, and workflow
+              automation with fast iteration, low operational overhead, and secure user flows.
             </p>
           </div>
 
@@ -1177,13 +1243,13 @@
             </div>
             <div class="capability reveal delay-3">
               <div class="capability-mark">03</div>
-              <h4>Product UX</h4>
-              <p>Interfaces built to be clear under pressure, especially for field operations and fast-moving user contexts.</p>
+              <h4>Web and Mobile Apps</h4>
+              <p>Interfaces built for SaaS platforms, business workflows, and consumer-facing app experiences.</p>
             </div>
             <div class="capability reveal">
               <div class="capability-mark">04</div>
               <h4>Identity and Payments</h4>
-              <p>Secure authentication with Cognito and dependable payment flows that fit real customer behavior.</p>
+              <p>Secure authentication, dependable payment flows, and the operational pieces modern apps need to scale.</p>
             </div>
           </div>
         </div>
@@ -1261,7 +1327,7 @@
         <div class="footer-bar">
           <div>
             <strong>Green Nirv AI Solutions</strong>
-            <div class="footer-note">Building applied AI products that respect real work.</div>
+            <div class="footer-note">Building AI solutions, apps, and software that respect real work.</div>
           </div>
           <div class="footer-links">
             <a href="#about">About</a>
