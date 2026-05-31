@@ -461,6 +461,22 @@
       font-size: 16px;
     }
 
+    .section-header-product {
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 34px;
+    }
+
+    .section-header-product .section-title {
+      max-width: 13ch;
+      line-height: 0.98;
+    }
+
+    .section-header-product .section-text {
+      max-width: 640px;
+      font-size: 17px;
+    }
+
     .trust-grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
@@ -952,6 +968,15 @@
         flex-direction: column;
         align-items: flex-start;
       }
+
+      .section-header-product {
+        gap: 18px;
+      }
+
+      .section-header-product .section-title,
+      .section-header-product .section-text {
+        max-width: none;
+      }
     }
 
     @media (max-width: 640px) {
@@ -1136,7 +1161,7 @@
 
       <section class="section" id="products">
         <div class="container">
-          <div class="section-header reveal">
+          <div class="section-header section-header-product reveal">
             <div>
               <div class="section-label">What We Are Shipping</div>
               <h2 class="section-title">Two products, two very real problems.</h2>
@@ -1166,7 +1191,7 @@
             </article>
 
             <article class="product-card secondary reveal delay-2">
-              <div class="status">In Development · Mobile Consumer Product</div>
+              <div class="status">In Development · Consumer App</div>
               <h3>Dressup.ai</h3>
               <p>
                 A wardrobe intelligence app that helps people decide what to wear based on the occasion, their personal
