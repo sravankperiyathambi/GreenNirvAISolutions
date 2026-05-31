@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Green Nirv AI Solutions | Cloud, AI, Salesforce and Automation Solutions</title>
+  <title>Green Nirv AI Solutions | AI-First Products, Automation and Intelligent Systems</title>
   <meta
     name="description"
-    content="Green Nirv AI Solutions helps businesses design, build, modernize, and scale cloud, AI, Salesforce, SaaS, and automation solutions across leading technology ecosystems."
+    content="Green Nirv AI Solutions is an AI-first product and solutions company building intelligent applications, agentic AI systems, workflow automation, and enterprise AI platforms across cloud and SaaS ecosystems."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,6 +29,8 @@
       --mint: #dff4ef;
       --gold: #c6932d;
       --gold-soft: #f5e7c5;
+      --violet: #5b4bff;
+      --aqua: #18d7b5;
       --shadow: 0 28px 70px rgba(16, 33, 56, 0.12);
       --radius-xl: 32px;
       --radius-lg: 24px;
@@ -36,22 +38,16 @@
       --max: 1180px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: "Manrope", sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(circle at top left, rgba(15, 123, 108, 0.12), transparent 30%),
-        radial-gradient(circle at 85% 18%, rgba(198, 147, 45, 0.14), transparent 22%),
+        radial-gradient(circle at top left, rgba(91, 75, 255, 0.13), transparent 30%),
+        radial-gradient(circle at 85% 18%, rgba(24, 215, 181, 0.17), transparent 22%),
+        radial-gradient(circle at 50% 0%, rgba(198, 147, 45, 0.10), transparent 30%),
         linear-gradient(180deg, #f8fbfd 0%, #f4f8fb 36%, #ffffff 100%);
       overflow-x: hidden;
     }
@@ -62,945 +58,173 @@
       inset: 0;
       pointer-events: none;
       background-image:
-        linear-gradient(rgba(255, 255, 255, 0.6) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.6) 1px, transparent 1px);
+        linear-gradient(rgba(255, 255, 255, 0.62) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.62) 1px, transparent 1px);
       background-size: 44px 44px;
-      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.24), transparent 75%);
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.25), transparent 75%);
       z-index: 0;
     }
 
-    a {
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .shell {
-      position: relative;
-      z-index: 1;
-    }
-
-    .container {
-      width: min(calc(100% - 40px), var(--max));
-      margin: 0 auto;
-    }
-
-    .topbar {
-      padding-top: 18px;
-    }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+    .shell { position: relative; z-index: 1; }
+    .container { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; }
+    .topbar { padding-top: 18px; }
 
     .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 16px 20px;
-      background: rgba(255, 255, 255, 0.84);
-      border: 1px solid rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(16px);
-      border-radius: 999px;
-      box-shadow: 0 18px 50px rgba(19, 32, 49, 0.08);
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+      padding: 16px 20px; background: rgba(255,255,255,.84);
+      border: 1px solid rgba(255,255,255,.9); backdrop-filter: blur(16px);
+      border-radius: 999px; box-shadow: 0 18px 50px rgba(19,32,49,.08);
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      text-decoration: none;
-    }
-
+    .brand { display:flex; align-items:center; gap:14px; text-decoration:none; }
     .brand-mark {
-      width: 46px;
-      height: 46px;
-      display: grid;
-      place-items: center;
-      border-radius: 16px;
-      background: linear-gradient(135deg, var(--emerald), #13a08b);
-      color: var(--white);
-      font-size: 15px;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      box-shadow: 0 12px 30px rgba(15, 123, 108, 0.25);
+      width:46px; height:46px; display:grid; place-items:center; border-radius:16px;
+      background: linear-gradient(135deg, var(--emerald), var(--violet)); color:white;
+      font-size:15px; font-weight:800; letter-spacing:.12em;
+      box-shadow:0 12px 30px rgba(15,123,108,.25);
     }
+    .brand-copy strong { display:block; font-size:15px; font-weight:800; letter-spacing:-.02em; }
+    .brand-copy span { display:block; font-size:12px; color:var(--slate); }
+    .nav-links { display:flex; align-items:center; gap:8px; list-style:none; }
+    .nav-links a { text-decoration:none; padding:10px 14px; border-radius:999px; color:var(--slate); font-size:14px; font-weight:600; transition:.2s ease; }
+    .nav-links a:hover, .nav-links a:focus-visible { background:var(--cloud); color:var(--ink); transform:translateY(-1px); }
+    .nav-links .nav-button { background:var(--ink); color:white; box-shadow:0 14px 30px rgba(13,23,38,.14); }
 
-    .brand-copy strong {
-      display: block;
-      font-size: 15px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-
-    .brand-copy span {
-      display: block;
-      font-size: 12px;
-      color: var(--slate);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      padding: 10px 14px;
-      border-radius: 999px;
-      color: var(--slate);
-      font-size: 14px;
-      font-weight: 600;
-      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
-    }
-
-    .nav-links a:hover,
-    .nav-links a:focus-visible {
-      background: var(--cloud);
-      color: var(--ink);
-      transform: translateY(-1px);
-    }
-
-    .nav-links .nav-button {
-      background: var(--ink);
-      color: var(--white);
-      box-shadow: 0 14px 30px rgba(13, 23, 38, 0.14);
-    }
-
-    .hero {
-      padding: 46px 0 32px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
-      gap: 28px;
-      align-items: stretch;
-    }
-
-    .hero-copy,
-    .hero-panel {
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-
+    .hero { padding:46px 0 32px; }
+    .hero-grid { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(320px,.9fr); gap:28px; align-items:stretch; }
+    .hero-copy, .hero-panel { border-radius:var(--radius-xl); overflow:hidden; box-shadow:var(--shadow); }
     .hero-copy {
-      position: relative;
-      padding: 42px;
-      min-height: 620px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background:
-        linear-gradient(140deg, rgba(15, 123, 108, 0.96) 0%, rgba(9, 67, 61, 0.94) 62%, rgba(7, 39, 37, 0.98) 100%);
-      color: var(--white);
+      position:relative; padding:42px; min-height:640px; display:flex; flex-direction:column; justify-content:space-between;
+      background: linear-gradient(140deg, rgba(13,23,38,.98) 0%, rgba(15,80,85,.96) 45%, rgba(9,67,61,.98) 100%); color:white;
     }
-
     .hero-copy::before {
-      content: "";
-      position: absolute;
-      inset: auto -5% -18% auto;
-      width: 360px;
-      height: 360px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(245, 231, 197, 0.28), transparent 60%);
-      z-index: 0;
-    }
-
-    .hero-copy > * {
-      position: relative;
-      z-index: 1;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.1);
-      width: fit-content;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #8ff1dc;
-      box-shadow: 0 0 16px rgba(143, 241, 220, 0.9);
-    }
-
-    .hero-title {
-      margin-top: 28px;
-      max-width: 12ch;
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(3.8rem, 8vw, 6.6rem);
-      line-height: 0.9;
-      letter-spacing: -0.05em;
-      font-weight: 700;
-    }
-
-    .hero-title em {
-      font-style: italic;
-      color: #f5dfaa;
-    }
-
-    .hero-subtitle {
-      max-width: 560px;
-      margin-top: 22px;
-      font-size: 18px;
-      line-height: 1.8;
-      color: rgba(255, 255, 255, 0.84);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 34px;
-    }
-
-    .button,
-    .button-ghost {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      min-height: 52px;
-      padding: 0 22px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 700;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-    }
-
-    .button {
-      background: var(--white);
-      color: var(--ink);
-      box-shadow: 0 18px 34px rgba(8, 41, 38, 0.22);
-    }
-
-    .button:hover,
-    .button:focus-visible {
-      transform: translateY(-2px);
-    }
-
-    .button-ghost {
-      color: var(--white);
-      border: 1px solid rgba(255, 255, 255, 0.24);
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    .button-ghost:hover,
-    .button-ghost:focus-visible {
-      transform: translateY(-2px);
-      background: rgba(255, 255, 255, 0.14);
-    }
-
-    .hero-metrics {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 34px;
-    }
-
-    .metric {
-      padding: 18px;
-      border-radius: 22px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .metric strong {
-      display: block;
-      font-size: 28px;
-      font-weight: 800;
-      margin-bottom: 6px;
-    }
-
-    .metric span {
-      display: block;
-      font-size: 12px;
-      line-height: 1.5;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: rgba(255, 255, 255, 0.72);
-    }
-
-    .hero-panel {
-      position: relative;
-      padding: 24px;
-      display: grid;
-      gap: 18px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(250, 252, 253, 0.98));
-      border: 1px solid rgba(255, 255, 255, 0.8);
-    }
-
-    .panel-card {
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 24px;
-    }
-
-    .panel-kicker {
-      font-size: 12px;
-      font-weight: 800;
-      color: var(--emerald-deep);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .panel-title {
-      margin-top: 14px;
-      font-size: 28px;
-      line-height: 1.15;
-      letter-spacing: -0.04em;
-    }
-
-    .panel-text {
-      margin-top: 12px;
-      color: var(--slate);
-      line-height: 1.75;
-      font-size: 15px;
-    }
-
-    .signal-list {
-      margin-top: 18px;
-      display: grid;
-      gap: 12px;
-    }
-
-    .signal-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      color: var(--ink);
-    }
-
-    .signal-item::before {
-      content: "";
-      width: 10px;
-      height: 10px;
-      margin-top: 8px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--emerald), #27c7ad);
-      flex-shrink: 0;
-      box-shadow: 0 0 0 6px rgba(15, 123, 108, 0.08);
-    }
-
-    .stack-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .stack-pill {
-      padding: 14px 16px;
-      border-radius: 18px;
-      background: var(--cloud);
-      border: 1px solid rgba(13, 23, 38, 0.08);
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--ink-soft);
-    }
-
-    .section {
-      padding: 34px 0;
-    }
-
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      gap: 24px;
-      align-items: end;
-      margin-bottom: 26px;
-    }
-
-    .section-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--emerald-deep);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .section-label::before {
-      content: "";
-      width: 28px;
-      height: 2px;
-      border-radius: 999px;
-      background: var(--emerald);
-    }
-
-    .section-title {
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(2.6rem, 5vw, 4.3rem);
-      line-height: 0.95;
-      letter-spacing: -0.05em;
-      max-width: 9ch;
-    }
-
-    .section-text {
-      max-width: 520px;
-      color: var(--slate);
-      line-height: 1.8;
-      font-size: 16px;
-    }
-
-    .section-header-product {
-      align-items: center;
-      gap: 40px;
-      margin-bottom: 34px;
-    }
-
-    .section-header-product .section-title {
-      max-width: 13ch;
-      line-height: 0.98;
-    }
-
-    .section-header-product .section-text {
-      max-width: 640px;
-      font-size: 17px;
-    }
-
-    .trust-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 22px;
-    }
-
-    .trust-story,
-    .trust-founder {
-      background: rgba(255, 255, 255, 0.86);
-      border: 1px solid rgba(255, 255, 255, 0.92);
-      border-radius: var(--radius-xl);
-      padding: 32px;
-      box-shadow: var(--shadow);
-    }
-
-    .trust-story p {
-      color: var(--slate);
-      line-height: 1.86;
-      font-size: 16px;
-      margin-bottom: 16px;
-    }
-
-    .insight-band {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .insight {
-      padding: 18px;
-      border-radius: 20px;
-      background: linear-gradient(180deg, #ffffff 0%, #f7fbfb 100%);
-      border: 1px solid var(--line);
-    }
-
-    .insight strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 14px;
-      letter-spacing: -0.02em;
-    }
-
-    .insight span {
-      display: block;
-      color: var(--slate);
-      font-size: 13px;
-      line-height: 1.65;
-    }
-
-    .founder-badge {
-      width: 72px;
-      height: 72px;
-      display: grid;
-      place-items: center;
-      border-radius: 22px;
-      background: linear-gradient(135deg, var(--gold), #d9ae57);
-      color: var(--ink);
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      margin-bottom: 18px;
-      box-shadow: 0 18px 34px rgba(198, 147, 45, 0.18);
-    }
-
-    .trust-founder h3 {
-      font-size: 28px;
-      letter-spacing: -0.04em;
-    }
-
-    .founder-role {
-      margin-top: 6px;
-      font-size: 14px;
-      color: var(--slate);
-    }
-
-    .trust-founder p {
-      margin-top: 16px;
-      color: var(--slate);
-      line-height: 1.8;
-      font-size: 15px;
-    }
-
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .tag {
-      padding: 9px 12px;
-      border-radius: 999px;
-      background: var(--cloud);
-      border: 1px solid rgba(13, 23, 38, 0.08);
-      color: var(--ink-soft);
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    .product-card {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      min-height: 100%;
-      padding: 30px;
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-
-    .product-card.primary {
-      background: linear-gradient(160deg, #0f192a 0%, #122238 48%, #17374d 100%);
-      color: var(--white);
-    }
-
-    .product-card.secondary {
-      background: linear-gradient(160deg, #fff6e2 0%, #fff9ef 55%, #ffffff 100%);
-      color: var(--ink);
-      border: 1px solid rgba(198, 147, 45, 0.16);
-    }
-
-    .status {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      width: fit-content;
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .primary .status {
-      background: rgba(143, 241, 220, 0.12);
-      color: #9ef1dd;
-      border: 1px solid rgba(143, 241, 220, 0.16);
-    }
-
-    .secondary .status {
-      background: rgba(198, 147, 45, 0.14);
-      color: #8f6518;
-      border: 1px solid rgba(198, 147, 45, 0.16);
-    }
-
-    .product-card h3 {
-      margin-top: 18px;
-      font-size: 38px;
-      line-height: 1;
-      letter-spacing: -0.05em;
-    }
-
-    .product-card p {
-      margin-top: 14px;
-      line-height: 1.8;
-      font-size: 15px;
-    }
-
-    .primary p {
-      color: rgba(255, 255, 255, 0.74);
-    }
-
-    .secondary p {
-      color: #46556a;
-    }
-
-    .feature-list {
-      list-style: none;
-      display: grid;
-      gap: 12px;
-      margin-top: 24px;
-      margin-bottom: 28px;
-    }
-
-    .feature-list li {
-      display: flex;
-      gap: 12px;
-      line-height: 1.65;
-      font-size: 14px;
-    }
-
-    .feature-list li::before {
-      content: "→";
-      font-weight: 800;
-      flex-shrink: 0;
-    }
-
-    .product-link {
-      margin-top: auto;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 14px;
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .service-card {
-      padding: 24px;
-      border-radius: 24px;
-      background: rgba(255, 255, 255, 0.86);
-      border: 1px solid rgba(255, 255, 255, 0.92);
-      box-shadow: 0 18px 50px rgba(17, 28, 46, 0.08);
-    }
-
-    .service-card h4 {
-      font-size: 18px;
-      letter-spacing: -0.03em;
-      margin-bottom: 10px;
-    }
-
-    .service-card p {
-      color: var(--slate);
-      line-height: 1.75;
-      font-size: 14px;
-    }
-
-    .capability-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .capability {
-      padding: 24px;
-      border-radius: 24px;
-      background: rgba(255, 255, 255, 0.84);
-      border: 1px solid rgba(255, 255, 255, 0.92);
-      box-shadow: 0 18px 50px rgba(17, 28, 46, 0.08);
-    }
-
-    .capability-mark {
-      width: 44px;
-      height: 44px;
-      display: grid;
-      place-items: center;
-      border-radius: 14px;
-      background: var(--mint);
-      color: var(--emerald-deep);
-      font-size: 18px;
-      font-weight: 800;
-      margin-bottom: 18px;
-    }
-
-    .capability h4 {
-      font-size: 18px;
-      letter-spacing: -0.03em;
-      margin-bottom: 8px;
-    }
-
-    .capability p {
-      color: var(--slate);
-      line-height: 1.75;
-      font-size: 14px;
-    }
-
-    .process-shell {
-      display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap: 22px;
-    }
-
-    .process-card,
-    .contact-card {
-      padding: 32px;
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow);
-    }
-
-    .process-card {
-      background: linear-gradient(180deg, #0f1828 0%, #101f31 100%);
-      color: var(--white);
-    }
-
-    .process-card p {
-      color: rgba(255, 255, 255, 0.76);
-      line-height: 1.82;
-      margin-top: 14px;
-    }
-
-    .steps {
-      display: grid;
-      gap: 14px;
-      margin-top: 22px;
-    }
-
-    .step {
-      display: grid;
-      grid-template-columns: 48px 1fr;
-      gap: 14px;
-      align-items: start;
-      padding: 18px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .step-num {
-      width: 48px;
-      height: 48px;
-      display: grid;
-      place-items: center;
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.12);
-      font-weight: 800;
-    }
-
-    .step strong {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 15px;
-    }
-
-    .step span {
-      display: block;
-      color: rgba(255, 255, 255, 0.72);
-      line-height: 1.7;
-      font-size: 14px;
-    }
-
-    .contact-card {
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, #ffffff 100%);
-      border: 1px solid rgba(255, 255, 255, 0.9);
-    }
-
-    .contact-card h3 {
-      font-size: 34px;
-      line-height: 1;
-      letter-spacing: -0.05em;
-      margin-bottom: 12px;
-    }
-
-    .contact-card p {
-      color: var(--slate);
-      line-height: 1.8;
-      margin-bottom: 24px;
-    }
-
-    .contact-list {
-      display: grid;
-      gap: 12px;
-      margin-bottom: 24px;
-    }
-
-    .contact-item {
-      padding: 16px 18px;
-      border-radius: 18px;
-      background: var(--cloud);
-      border: 1px solid rgba(13, 23, 38, 0.06);
-    }
-
-    .contact-item small {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--emerald-deep);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .contact-item a,
-    .contact-item span {
-      font-size: 15px;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .footer {
-      padding: 24px 0 42px;
-    }
-
-    .footer-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-      padding: 22px 24px;
-      border-radius: 24px;
-      background: rgba(255, 255, 255, 0.84);
-      border: 1px solid rgba(255, 255, 255, 0.9);
-      box-shadow: 0 18px 44px rgba(18, 28, 46, 0.08);
-    }
-
-    .footer-note {
-      color: var(--slate);
-      font-size: 14px;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .footer-links a {
-      text-decoration: none;
-      color: var(--slate);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .delay-1 {
-      transition-delay: 0.08s;
-    }
-
-    .delay-2 {
-      transition-delay: 0.16s;
-    }
-
-    .delay-3 {
-      transition-delay: 0.24s;
-    }
-
-    @media (max-width: 1080px) {
-      .hero-grid,
-      .trust-grid,
-      .process-shell {
-        grid-template-columns: 1fr;
-      }
-
-      .capability-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .services-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 820px) {
-      .nav {
-        border-radius: 28px;
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .nav-links {
-        flex-wrap: wrap;
-      }
-
-      .hero-copy,
-      .hero-panel,
-      .trust-story,
-      .trust-founder,
-      .product-card,
-      .process-card,
-      .contact-card {
-        padding: 24px;
-      }
-
-      .hero-copy {
-        min-height: auto;
-      }
-
-      .hero-metrics,
-      .insight-band,
-      .product-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .section-header,
-      .footer-bar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .section-header-product {
-        gap: 18px;
-      }
-
-      .section-header-product .section-title,
-      .section-header-product .section-text {
-        max-width: none;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .container {
-        width: min(calc(100% - 24px), var(--max));
-      }
-
-      .topbar {
-        padding-top: 12px;
-      }
-
-      .hero {
-        padding-top: 22px;
-      }
-
-      .hero-title {
-        font-size: clamp(3.2rem, 18vw, 4.5rem);
-      }
-
-      .capability-grid,
-      .services-grid,
-      .stack-grid {
-        grid-template-columns: 1fr;
-      }
+      content:""; position:absolute; inset:auto -5% -18% auto; width:380px; height:380px; border-radius:50%;
+      background: radial-gradient(circle, rgba(143,241,220,.32), transparent 60%); z-index:0;
+    }
+    .hero-copy::after {
+      content:"AI"; position:absolute; right:24px; bottom:8px; font-size:170px; line-height:1; font-weight:800;
+      letter-spacing:-.08em; color:rgba(255,255,255,.045); z-index:0;
+    }
+    .hero-copy > * { position:relative; z-index:1; }
+    .eyebrow { display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border-radius:999px; background:rgba(255,255,255,.1); width:fit-content; font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+    .eyebrow::before { content:""; width:8px; height:8px; border-radius:50%; background:#8ff1dc; box-shadow:0 0 16px rgba(143,241,220,.9); }
+    .hero-title { margin-top:28px; max-width:11ch; font-family:"Cormorant Garamond",serif; font-size:clamp(3.6rem,7.4vw,6.4rem); line-height:.9; letter-spacing:-.05em; font-weight:700; }
+    .hero-title em { font-style:italic; color:#f5dfaa; }
+    .hero-subtitle { max-width:610px; margin-top:22px; font-size:18px; line-height:1.8; color:rgba(255,255,255,.84); }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:14px; margin-top:34px; }
+    .button, .button-ghost { display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:52px; padding:0 22px; border-radius:999px; text-decoration:none; font-size:15px; font-weight:700; transition:.2s ease; }
+    .button { background:white; color:var(--ink); box-shadow:0 18px 34px rgba(8,41,38,.22); }
+    .button:hover, .button-ghost:hover, .button:focus-visible, .button-ghost:focus-visible { transform:translateY(-2px); }
+    .button-ghost { color:white; border:1px solid rgba(255,255,255,.24); background:rgba(255,255,255,.08); }
+    .button-ghost:hover { background:rgba(255,255,255,.14); }
+    .hero-metrics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-top:34px; }
+    .metric { padding:18px; border-radius:22px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); }
+    .metric strong { display:block; font-size:26px; font-weight:800; margin-bottom:6px; letter-spacing:-.04em; }
+    .metric span { display:block; font-size:12px; line-height:1.5; text-transform:uppercase; letter-spacing:.08em; color:rgba(255,255,255,.72); }
+
+    .hero-panel { position:relative; padding:24px; display:grid; gap:18px; background:linear-gradient(180deg,rgba(255,255,255,.9),rgba(250,252,253,.98)); border:1px solid rgba(255,255,255,.8); }
+    .panel-card { background:white; border:1px solid var(--line); border-radius:24px; padding:24px; }
+    .panel-kicker { font-size:12px; font-weight:800; color:var(--emerald-deep); letter-spacing:.12em; text-transform:uppercase; }
+    .panel-title { margin-top:14px; font-size:28px; line-height:1.15; letter-spacing:-.04em; }
+    .panel-text { margin-top:12px; color:var(--slate); line-height:1.75; font-size:15px; }
+    .signal-list { margin-top:18px; display:grid; gap:12px; }
+    .signal-item { display:flex; align-items:flex-start; gap:12px; color:var(--ink); }
+    .signal-item::before { content:""; width:10px; height:10px; margin-top:8px; border-radius:50%; background:linear-gradient(135deg,var(--emerald),var(--violet)); flex-shrink:0; box-shadow:0 0 0 6px rgba(15,123,108,.08); }
+    .stack-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    .stack-pill { padding:14px 16px; border-radius:18px; background:var(--cloud); border:1px solid rgba(13,23,38,.08); font-size:13px; font-weight:700; color:var(--ink-soft); }
+
+    .section { padding:34px 0; }
+    .section-header { display:flex; justify-content:space-between; gap:24px; align-items:end; margin-bottom:26px; }
+    .section-label { display:inline-flex; align-items:center; gap:10px; color:var(--emerald-deep); font-size:12px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; margin-bottom:10px; }
+    .section-label::before { content:""; width:28px; height:2px; border-radius:999px; background:var(--emerald); }
+    .section-title { font-family:"Cormorant Garamond",serif; font-size:clamp(2.6rem,5vw,4.3rem); line-height:.95; letter-spacing:-.05em; max-width:10ch; }
+    .section-text { max-width:560px; color:var(--slate); line-height:1.8; font-size:16px; }
+    .section-header-product { align-items:center; gap:40px; margin-bottom:34px; }
+    .section-header-product .section-title { max-width:13ch; line-height:.98; }
+    .section-header-product .section-text { max-width:650px; font-size:17px; }
+
+    .trust-grid, .process-shell { display:grid; grid-template-columns:1.15fr .85fr; gap:22px; }
+    .trust-story, .trust-founder { background:rgba(255,255,255,.86); border:1px solid rgba(255,255,255,.92); border-radius:var(--radius-xl); padding:32px; box-shadow:var(--shadow); }
+    .trust-story p, .trust-founder p { color:var(--slate); line-height:1.86; font-size:16px; margin-bottom:16px; }
+    .insight-band { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:24px; }
+    .insight { padding:18px; border-radius:20px; background:linear-gradient(180deg,#fff 0%,#f7fbfb 100%); border:1px solid var(--line); }
+    .insight strong { display:block; margin-bottom:8px; font-size:14px; letter-spacing:-.02em; }
+    .insight span { display:block; color:var(--slate); font-size:13px; line-height:1.65; }
+    .founder-badge { width:72px; height:72px; display:grid; place-items:center; border-radius:22px; background:linear-gradient(135deg,var(--violet),var(--aqua)); color:white; font-size:22px; font-weight:800; letter-spacing:.08em; margin-bottom:18px; box-shadow:0 18px 34px rgba(91,75,255,.18); }
+    .trust-founder h3 { font-size:28px; letter-spacing:-.04em; }
+    .founder-role { margin-top:6px; font-size:14px; color:var(--slate); }
+    .tag-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
+    .tag { padding:9px 12px; border-radius:999px; background:var(--cloud); border:1px solid rgba(13,23,38,.08); color:var(--ink-soft); font-size:12px; font-weight:700; }
+
+    .product-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
+    .product-card { position:relative; display:flex; flex-direction:column; min-height:100%; padding:30px; border-radius:var(--radius-xl); overflow:hidden; box-shadow:var(--shadow); }
+    .product-card.primary { background:linear-gradient(160deg,#0f192a 0%,#122238 48%,#17374d 100%); color:white; }
+    .product-card.secondary { background:linear-gradient(160deg,#fff6e2 0%,#fff9ef 55%,#fff 100%); color:var(--ink); border:1px solid rgba(198,147,45,.16); }
+    .status { display:inline-flex; align-items:center; gap:10px; width:fit-content; padding:10px 14px; border-radius:999px; font-size:12px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
+    .primary .status { background:rgba(143,241,220,.12); color:#9ef1dd; border:1px solid rgba(143,241,220,.16); }
+    .secondary .status { background:rgba(198,147,45,.14); color:#8f6518; border:1px solid rgba(198,147,45,.16); }
+    .product-card h3 { margin-top:18px; font-size:38px; line-height:1; letter-spacing:-.05em; }
+    .product-card p { margin-top:14px; line-height:1.8; font-size:15px; }
+    .primary p { color:rgba(255,255,255,.74); }
+    .secondary p { color:#46556a; }
+    .feature-list { list-style:none; display:grid; gap:12px; margin-top:24px; margin-bottom:28px; }
+    .feature-list li { display:flex; gap:12px; line-height:1.65; font-size:14px; }
+    .feature-list li::before { content:"→"; font-weight:800; flex-shrink:0; }
+    .product-link { margin-top:auto; display:inline-flex; align-items:center; gap:10px; font-size:14px; font-weight:800; text-decoration:none; }
+
+    .services-grid, .capability-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+    .service-card, .capability { padding:24px; border-radius:24px; background:rgba(255,255,255,.86); border:1px solid rgba(255,255,255,.92); box-shadow:0 18px 50px rgba(17,28,46,.08); }
+    .service-card h4, .capability h4 { font-size:18px; letter-spacing:-.03em; margin-bottom:10px; }
+    .service-card p, .capability p { color:var(--slate); line-height:1.75; font-size:14px; }
+    .capability-mark { width:44px; height:44px; display:grid; place-items:center; border-radius:14px; background:var(--mint); color:var(--emerald-deep); font-size:18px; font-weight:800; margin-bottom:18px; }
+
+    .process-card, .contact-card { padding:32px; border-radius:var(--radius-xl); box-shadow:var(--shadow); }
+    .process-card { background:linear-gradient(180deg,#0f1828 0%,#101f31 100%); color:white; }
+    .process-card p { color:rgba(255,255,255,.76); line-height:1.82; margin-top:14px; }
+    .steps { display:grid; gap:14px; margin-top:22px; }
+    .step { display:grid; grid-template-columns:48px 1fr; gap:14px; align-items:start; padding:18px; border-radius:20px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); }
+    .step-num { width:48px; height:48px; display:grid; place-items:center; border-radius:14px; background:rgba(255,255,255,.12); font-weight:800; }
+    .step strong { display:block; margin-bottom:6px; font-size:15px; }
+    .step span { display:block; color:rgba(255,255,255,.72); line-height:1.7; font-size:14px; }
+    .contact-card { background:linear-gradient(180deg,rgba(255,255,255,.88) 0%,#fff 100%); border:1px solid rgba(255,255,255,.9); }
+    .contact-card h3 { font-size:34px; line-height:1; letter-spacing:-.05em; margin-bottom:12px; }
+    .contact-card p { color:var(--slate); line-height:1.8; margin-bottom:24px; }
+    .contact-list { display:grid; gap:12px; margin-bottom:24px; }
+    .contact-item { padding:16px 18px; border-radius:18px; background:var(--cloud); border:1px solid rgba(13,23,38,.06); }
+    .contact-item small { display:block; margin-bottom:6px; color:var(--emerald-deep); font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+    .contact-item a, .contact-item span { font-size:15px; font-weight:700; text-decoration:none; }
+
+    .footer { padding:24px 0 42px; }
+    .footer-bar { display:flex; justify-content:space-between; align-items:center; gap:18px; padding:22px 24px; border-radius:24px; background:rgba(255,255,255,.84); border:1px solid rgba(255,255,255,.9); box-shadow:0 18px 44px rgba(18,28,46,.08); }
+    .footer-note { color:var(--slate); font-size:14px; }
+    .footer-links { display:flex; gap:18px; flex-wrap:wrap; }
+    .footer-links a { text-decoration:none; color:var(--slate); font-size:14px; font-weight:700; }
+    .reveal { opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .delay-1 { transition-delay:.08s; } .delay-2 { transition-delay:.16s; } .delay-3 { transition-delay:.24s; }
+
+    @media (max-width:1080px) {
+      .hero-grid, .trust-grid, .process-shell { grid-template-columns:1fr; }
+      .capability-grid, .services-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    }
+    @media (max-width:820px) {
+      .nav { border-radius:28px; align-items:flex-start; flex-direction:column; }
+      .nav-links { flex-wrap:wrap; }
+      .hero-copy, .hero-panel, .trust-story, .trust-founder, .product-card, .process-card, .contact-card { padding:24px; }
+      .hero-copy { min-height:auto; }
+      .hero-metrics, .insight-band, .product-grid { grid-template-columns:1fr; }
+      .section-header, .footer-bar { flex-direction:column; align-items:flex-start; }
+      .section-header-product { gap:18px; }
+      .section-header-product .section-title, .section-header-product .section-text { max-width:none; }
+    }
+    @media (max-width:640px) {
+      .container { width:min(calc(100% - 24px), var(--max)); }
+      .topbar { padding-top:12px; }
+      .hero { padding-top:22px; }
+      .hero-title { font-size:clamp(3.2rem,18vw,4.5rem); }
+      .capability-grid, .services-grid, .stack-grid { grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -1013,13 +237,13 @@
             <span class="brand-mark">GN</span>
             <span class="brand-copy">
               <strong>Green Nirv AI Solutions</strong>
-              <span>Cloud, AI, Salesforce, SaaS, and automation solutions</span>
+              <span>AI-first products, automation, and intelligent systems</span>
             </span>
           </a>
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#products">Solutions</a></li>
-            <li><a href="#capabilities">Capabilities</a></li>
+            <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#capabilities">AI Capabilities</a></li>
             <li><a href="#contact" class="nav-button">Start a Conversation</a></li>
           </ul>
         </nav>
@@ -1031,60 +255,62 @@
         <div class="container hero-grid">
           <div class="hero-copy reveal">
             <div>
-              <div class="eyebrow">Cloud-agnostic · SaaS-ready · Outcome focused</div>
-              <h1 class="hero-title">Cloud, AI and SaaS solutions built for <em>modern business</em>.</h1>
+              <div class="eyebrow">AI-first · Agentic systems · Production outcomes</div>
+              <h1 class="hero-title">AI products built for the <em>real world</em>.</h1>
               <p class="hero-subtitle">
-                Green Nirv AI Solutions helps organizations design, build, and modernize practical technology solutions across cloud,
-                AI, Salesforce, SaaS, and enterprise automation ecosystems. We turn fragmented workflows into reliable
-                applications, integrated platforms, and scalable digital operations across AWS, Microsoft Azure, Google
-                Cloud Platform, Salesforce, and modern SaaS environments.
+                Green Nirv AI Solutions is an AI-first product and solutions company building intelligent applications,
+                AI assistants, agentic workflows, and automation systems that solve practical business problems. Cloud,
+                Salesforce, and SaaS platforms support the mission — AI is the core.
               </p>
               <div class="hero-actions">
-                <a href="#products" class="button">Explore Solutions</a>
+                <a href="#solutions" class="button">Explore AI Solutions</a>
                 <a href="#contact" class="button-ghost">Talk With Us</a>
               </div>
             </div>
 
             <div class="hero-metrics">
               <div class="metric">
-                <strong>Enterprise-grade</strong>
-                <span>Cloud, AI, SaaS, and software delivery</span>
+                <strong>AI-First</strong>
+                <span>Products, copilots, agents, and intelligent workflows</span>
               </div>
               <div class="metric">
-                <strong>AWS · Azure · GCP · Salesforce</strong>
-                <span>Architectures designed to fit the right hyperscaler for the workload</span>
+                <strong>LLMs + Agents</strong>
+                <span>Generative AI, RAG, automation, and connected systems</span>
               </div>
               <div class="metric">
-                <strong>Multi-industry</strong>
-                <span>Solutions across operations, CRM, SaaS, and AI</span>
+                <strong>Production</strong>
+                <span>From idea to usable product with reliable delivery</span>
               </div>
             </div>
           </div>
 
           <aside class="hero-panel reveal delay-1">
             <div class="panel-card">
-              <span class="panel-kicker">Company Focus</span>
-              <h2 class="panel-title">Building practical cloud, AI, Salesforce, and SaaS solutions for modern businesses.</h2>
+              <span class="panel-kicker">Current Focus</span>
+              <h2 class="panel-title">Building AI-native products and intelligent systems for modern businesses.</h2>
               <p class="panel-text">
-                Green Nirv AI Solutions applies cloud architecture, AI, Salesforce capabilities, enterprise integrations, and workflow automation
-                to create solutions that are modern, scalable, and aligned to real business needs across leading technology ecosystems.
+                We focus on applied AI: systems that automate work, improve decisions, support users, and integrate into
+                the way businesses already operate. Our work spans AI-powered SaaS products, internal tools, intelligent
+                assistants, and workflow automation.
               </p>
               <div class="signal-list">
-                <div class="signal-item">Business applications and SaaS platforms designed around real operational workflows</div>
-                <div class="signal-item">AI-assisted digital experiences that improve productivity, personalization, and decision-making</div>
-                <div class="signal-item">Strong focus on speed to market, platform reliability, workflow fit, and production-ready delivery</div>
-                <div class="signal-item">Technical foundation designed for cloud, CRM, SaaS, AI, and connected enterprise ecosystems</div>
-                <div class="signal-item">Deployment patterns available for AWS, Azure, Google Cloud, and Salesforce based on product and compliance needs</div>
+                <div class="signal-item">AI assistants and copilots for business operations and customer experiences</div>
+                <div class="signal-item">Agentic AI workflows that can reason, route, summarize, and take action</div>
+                <div class="signal-item">RAG and enterprise knowledge systems for trusted retrieval and decision support</div>
+                <div class="signal-item">AI-powered web and mobile products designed for repeat use</div>
+                <div class="signal-item">Deployment across AWS, Azure, Google Cloud, Salesforce, and SaaS ecosystems</div>
               </div>
             </div>
 
             <div class="panel-card">
-              <span class="panel-kicker">Technology</span>
+              <span class="panel-kicker">AI Technology</span>
               <div class="stack-grid">
-                <div class="stack-pill">AWS, Azure, Google Cloud, and Salesforce</div>
-                <div class="stack-pill">Serverless, containers, managed data, and SaaS platforms</div>
-                <div class="stack-pill">OpenAI, Claude, Gemini, cloud AI, and CRM intelligence</div>
-                <div class="stack-pill">Modern apps, APIs, CRM, and automation systems</div>
+                <div class="stack-pill">Generative AI and LLM apps</div>
+                <div class="stack-pill">Agentic AI and MCP integrations</div>
+                <div class="stack-pill">RAG and knowledge systems</div>
+                <div class="stack-pill">OpenAI, Claude, Gemini, and cloud AI</div>
+                <div class="stack-pill">AWS, Azure, and Google Cloud</div>
+                <div class="stack-pill">Salesforce and enterprise SaaS</div>
               </div>
             </div>
           </aside>
@@ -1096,115 +322,122 @@
           <div class="section-header reveal">
             <div>
               <div class="section-label">Who We Are</div>
-              <h2 class="section-title">We build technology solutions with operating discipline.</h2>
+              <h2 class="section-title">An AI-first company with delivery discipline.</h2>
             </div>
             <p class="section-text">
-              The goal is simple: deliver systems people can trust. That means clear workflows, dependable platforms,
-              thoughtful application design, and intelligent automation that supports the business instead of complicating it.
+              We help businesses move beyond AI experiments and build systems that create measurable value: faster
+              decisions, cleaner workflows, better customer experiences, and less manual coordination.
             </p>
           </div>
 
           <div class="trust-grid">
             <div class="trust-story reveal delay-1">
               <p>
-                Green Nirv AI Solutions is a technology consulting and solutions company focused on cloud, AI, Salesforce, SaaS, and automation.
-                We build applications, integrations, platforms, and internal tools for teams that need better throughput, cleaner
-                decision-making, and less manual coordination.
+                Green Nirv AI Solutions builds AI-native products, intelligent automation, and custom software that make
+                work easier to execute. The goal is not to add AI as decoration — the goal is to design systems where AI
+                improves the core workflow.
               </p>
               <p>
-                Instead of leading with hype, we lead with implementation. We identify the friction, shape the
-                workflow, and engineer the software around the reality of how people already work.
+                We start with the business problem, then design the right combination of AI, automation, user experience,
+                integrations, and cloud infrastructure. That keeps the solution practical, scalable, and aligned to how
+                teams actually work.
               </p>
               <p>
-                That approach applies across business operations, CRM, enterprise applications, digital platforms, and automation initiatives.
+                Cloud platforms, Salesforce, SaaS integrations, APIs, and modern application architecture are treated as
+                enablers. The primary focus is always intelligent systems that deliver useful outcomes.
               </p>
 
               <div class="insight-band">
                 <div class="insight">
-                  <strong>Applied over abstract</strong>
-                  <span>We favor clear business outcomes over novelty for novelty's sake.</span>
+                  <strong>AI over hype</strong>
+                  <span>We focus on practical AI workflows that improve execution, not buzzwords.</span>
                 </div>
                 <div class="insight">
-                  <strong>Modern from the start</strong>
-                  <span>Cloud-agnostic, SaaS-aware, secure, and ready to scale without unnecessary infrastructure overhead.</span>
+                  <strong>Built to operate</strong>
+                  <span>Solutions are designed for secure, dependable, day-to-day business use.</span>
                 </div>
                 <div class="insight">
-                  <strong>Built for fit</strong>
-                  <span>We align the stack, workflow, cloud platform, CRM, and SaaS ecosystem to the business instead of forcing a preset mold.</span>
+                  <strong>Platform flexible</strong>
+                  <span>We select the right AI, cloud, CRM, and SaaS stack for the actual need.</span>
                 </div>
               </div>
             </div>
 
             <div class="trust-founder reveal delay-2">
-              <div class="founder-badge">MC</div>
-              <h3>Technology Ecosystem</h3>
-              <div class="founder-role">Cloud, Salesforce, SaaS, AI, and application delivery</div>
+              <div class="founder-badge">AI</div>
+              <h3>AI-Native Delivery</h3>
+              <div class="founder-role">Intelligent products, agents, automation, and enterprise AI</div>
               <p>
-                We design delivery paths that can align to AWS, Microsoft Azure, Google Cloud Platform, Salesforce, and enterprise SaaS
-                environments depending on the business process, integration surface, security model, and operational constraints.
+                Our solutions combine generative AI, agentic workflows, retrieval systems, automation, and modern
+                software engineering to create products that are usable in real business environments.
               </p>
               <p>
-                The goal is practical technology selection: use the cloud, CRM, SaaS, and automation capabilities that best match the
-                workload, then ship with clear operating discipline and room to scale.
+                We support deployment across AWS, Microsoft Azure, Google Cloud, Salesforce, and enterprise SaaS platforms
+                so businesses can adopt AI without being locked into a single ecosystem.
               </p>
               <div class="tag-row">
+                <span class="tag">Generative AI</span>
+                <span class="tag">AI Agents</span>
+                <span class="tag">RAG Systems</span>
+                <span class="tag">MCP Integrations</span>
+                <span class="tag">Workflow Automation</span>
+                <span class="tag">Salesforce</span>
                 <span class="tag">AWS</span>
                 <span class="tag">Azure</span>
                 <span class="tag">Google Cloud</span>
-                <span class="tag">AI Systems</span>
-                <span class="tag">SaaS Integration</span>
-                <span class="tag">Cloud Architecture</span>
-                <span class="tag">Production Delivery</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="products">
+      <section class="section" id="solutions">
         <div class="container">
           <div class="section-header section-header-product reveal">
             <div>
-              <div class="section-label">Solutions</div>
-              <h2 class="section-title">Cloud, AI, Salesforce, and automation solutions for real business needs.</h2>
+              <div class="section-label">What We Build</div>
+              <h2 class="section-title">AI solutions that move work forward.</h2>
             </div>
             <p class="section-text">
-              Our solutions focus on simplifying operations, integrating business platforms, modernizing applications, and applying AI where it creates measurable value.
-              Different industries, same principle: remove friction and add clarity.
+              We build AI-powered products and systems that help organizations automate workflows, support users,
+              connect systems, and make better decisions with less manual effort.
             </p>
           </div>
 
           <div class="product-grid">
             <article class="product-card primary reveal delay-1">
-              <div class="status">Solution Area</div>
-              <h3>SaaS & Workflow Platforms</h3>
+              <div class="status">AI Product Development</div>
+              <h3>AI-Native Applications</h3>
               <p>
-                Custom web, mobile, and SaaS platforms that replace fragmented manual processes with connected operating systems built around real business workflows.
+                Custom web, mobile, and SaaS products where AI is part of the core experience — not an afterthought.
+                These products can support recommendations, personalization, task assistance, content intelligence,
+                operational insights, and guided decision-making.
               </p>
               <ul class="feature-list">
-                <li>Role-based experiences for customers, teams, partners, and administrators</li>
-                <li>Payment, approval, notification, and workflow orchestration</li>
-                <li>Real-time visibility through cloud services, APIs, dashboards, and operational data</li>
-                <li>AI-assisted support for users, teams, and operational workflows</li>
-                <li>Analytics, reporting, and business performance visibility</li>
+                <li>AI-powered SaaS platforms and internal tools</li>
+                <li>Consumer and business applications with intelligent user experiences</li>
+                <li>LLM-powered features such as summarization, recommendations, and assistants</li>
+                <li>Secure authentication, payments, notifications, and analytics</li>
+                <li>Production deployment across cloud and SaaS ecosystems</li>
               </ul>
-              <a href="#contact" class="product-link">Modernize a workflow</a>
+              <a href="#contact" class="product-link">Build an AI product</a>
             </article>
 
             <article class="product-card secondary reveal delay-2">
-              <div class="status">Solution Area</div>
-              <h3>Salesforce & Enterprise Integrations</h3>
+              <div class="status">Automation and Agents</div>
+              <h3>Agentic AI Systems</h3>
               <p>
-                Salesforce, CRM, SaaS, and enterprise application integrations that connect systems, automate work, and create cleaner experiences for teams and customers.
+                Intelligent workflows that can retrieve knowledge, reason through tasks, trigger actions, and coordinate
+                across business systems. These systems are designed to reduce manual coordination and improve operational speed.
               </p>
               <ul class="feature-list">
-                <li>Salesforce configuration, workflow automation, and CRM optimization</li>
-                <li>SaaS, API, and enterprise platform integrations</li>
-                <li>AI-supported service, sales, and operations enablement</li>
-                <li>User experiences designed for speed, clarity, and repeat use</li>
-                <li>Cloud-ready, secure, and scalable delivery patterns</li>
+                <li>AI assistants, copilots, and task agents</li>
+                <li>RAG systems connected to business knowledge sources</li>
+                <li>MCP-enabled integrations and tool-connected workflows</li>
+                <li>Workflow automation across CRM, SaaS, APIs, and databases</li>
+                <li>Human-in-the-loop design for safe, controlled execution</li>
               </ul>
-              <a href="#contact" class="product-link">Start a solution conversation</a>
+              <a href="#contact" class="product-link">Automate a workflow</a>
             </article>
           </div>
         </div>
@@ -1214,31 +447,39 @@
         <div class="container">
           <div class="section-header reveal">
             <div>
-              <div class="section-label">Services</div>
-              <h2 class="section-title">What the company provides.</h2>
+              <div class="section-label">AI Capabilities</div>
+              <h2 class="section-title">AI is the center. Everything else supports it.</h2>
             </div>
             <p class="section-text">
-              Green Nirv AI Solutions operates as a cloud-agnostic technology solutions company with offerings across cloud consulting,
-              Salesforce, SaaS platforms, application development, AI, integrations, and workflow automation.
+              Cloud, Salesforce, SaaS, and application development are important — but they are the delivery layer. The
+              primary capability is designing AI-enabled systems that improve how work gets done.
             </p>
           </div>
 
           <div class="services-grid">
             <div class="service-card reveal delay-1">
-              <h4>Cloud Consulting</h4>
-              <p>AWS, Microsoft Azure, and Google Cloud strategy, migration, modernization, architecture, and optimization.</p>
+              <h4>AI Strategy & Transformation</h4>
+              <p>Identify high-value AI opportunities, define use cases, shape roadmaps, and move from experimentation to production.</p>
             </div>
             <div class="service-card reveal delay-2">
-              <h4>Salesforce Solutions</h4>
-              <p>Salesforce implementation, process automation, integrations, CRM optimization, and user experience improvement.</p>
+              <h4>Agentic AI Development</h4>
+              <p>Build assistants and agents that can reason, retrieve context, use tools, and support business workflows.</p>
             </div>
             <div class="service-card reveal delay-3">
-              <h4>Application Development</h4>
-              <p>Modern web, mobile, and SaaS applications designed for usability, reliability, and scalable delivery.</p>
+              <h4>RAG & Knowledge Systems</h4>
+              <p>Connect AI to trusted documents, data, and internal knowledge sources for grounded answers and decision support.</p>
             </div>
             <div class="service-card reveal">
-              <h4>AI & Automation</h4>
-              <p>AI assistants, copilots, intelligent workflows, and automation systems that reduce manual work and improve execution.</p>
+              <h4>AI Workflow Automation</h4>
+              <p>Automate repetitive steps, handoffs, summaries, routing, approvals, and operational tasks across systems.</p>
+            </div>
+            <div class="service-card reveal delay-1">
+              <h4>AI Product Engineering</h4>
+              <p>Design and build AI-powered web apps, mobile apps, SaaS products, dashboards, and internal platforms.</p>
+            </div>
+            <div class="service-card reveal delay-2">
+              <h4>Enterprise Integrations</h4>
+              <p>Integrate AI with Salesforce, SaaS tools, APIs, databases, cloud services, and business applications.</p>
             </div>
           </div>
         </div>
@@ -1248,35 +489,45 @@
         <div class="container">
           <div class="section-header reveal">
             <div>
-              <div class="section-label">Technology Capabilities</div>
-              <h2 class="section-title">The stack behind the delivery.</h2>
+              <div class="section-label">Technology Ecosystem</div>
+              <h2 class="section-title">Platform-agnostic by design.</h2>
             </div>
             <p class="section-text">
-              Our delivery model supports cloud, Salesforce, SaaS, AI, internal tools, and workflow automation with fast iteration,
-              low operational overhead, and secure user flows.
+              We choose the right architecture for the use case. AI models, cloud platforms, CRM systems, SaaS tools,
+              data stores, and application frameworks are selected based on business fit, security, scalability, and cost.
             </p>
           </div>
 
           <div class="capability-grid">
             <div class="capability reveal delay-1">
               <div class="capability-mark">01</div>
-              <h4>Cloud & SaaS Architecture</h4>
-              <p>AWS, Azure, Google Cloud, and Salesforce patterns for serverless systems, managed platforms, and resilient application delivery.</p>
+              <h4>AI Models and LLMs</h4>
+              <p>OpenAI, Claude, Gemini, cloud-native AI services, and model integrations selected for the right workflow.</p>
             </div>
             <div class="capability reveal delay-2">
               <div class="capability-mark">02</div>
-              <h4>AI & Automation</h4>
-              <p>AI services, copilots, agents, and automation used where reasoning, summarization, personalization, or decision support improves the workflow.</p>
+              <h4>Cloud Platforms</h4>
+              <p>AWS, Microsoft Azure, and Google Cloud patterns for secure, scalable, and resilient application delivery.</p>
             </div>
             <div class="capability reveal delay-3">
               <div class="capability-mark">03</div>
-              <h4>Web, Mobile & SaaS Apps</h4>
-              <p>Interfaces built for SaaS platforms, business workflows, CRM experiences, and customer-facing applications.</p>
+              <h4>Salesforce and SaaS</h4>
+              <p>CRM, enterprise SaaS, workflow tools, and business platforms connected into AI-enabled processes.</p>
             </div>
             <div class="capability reveal">
               <div class="capability-mark">04</div>
-              <h4>Identity, Data & Integrations</h4>
-              <p>Secure authentication, data flows, APIs, SaaS integrations, payments, and operational components modern platforms need to scale.</p>
+              <h4>Applications and APIs</h4>
+              <p>Modern web apps, mobile experiences, APIs, data flows, dashboards, and automation layers.</p>
+            </div>
+            <div class="capability reveal delay-1">
+              <div class="capability-mark">05</div>
+              <h4>Automation and Orchestration</h4>
+              <p>Event-driven workflows, notifications, approvals, routing, human-in-the-loop steps, and operational automation.</p>
+            </div>
+            <div class="capability reveal delay-2">
+              <div class="capability-mark">06</div>
+              <h4>Security and Governance</h4>
+              <p>Practical controls for access, data handling, monitoring, privacy, and responsible AI usage.</p>
             </div>
           </div>
         </div>
@@ -1285,32 +536,32 @@
       <section class="section" id="contact">
         <div class="container process-shell">
           <div class="process-card reveal">
-            <div class="section-label" style="color: #8ff1dc;">How We Work</div>
-            <h2 class="section-title" style="color: #ffffff; max-width: 10ch;">From messy workflow to usable product.</h2>
+            <div class="section-label" style="color:#8ff1dc;">How We Work</div>
+            <h2 class="section-title" style="color:#ffffff; max-width:10ch;">From AI idea to useful system.</h2>
             <p>
-              Whether the starting point is a cloud migration, Salesforce initiative, SaaS integration, automation opportunity, or product idea,
-              the work follows a straightforward path: understand the job, simplify the flow, then build the solution around it.
+              We turn AI opportunities into clear, usable products. The process starts with the business problem, then
+              moves through workflow design, prototype validation, integration, and production delivery.
             </p>
             <div class="steps">
               <div class="step">
                 <div class="step-num">1</div>
                 <div>
-                  <strong>Map the friction</strong>
-                  <span>We identify where time, attention, and trust are being wasted in the current process.</span>
+                  <strong>Find the AI opportunity</strong>
+                  <span>We identify where AI can reduce manual work, improve decisions, or unlock a better user experience.</span>
                 </div>
               </div>
               <div class="step">
                 <div class="step-num">2</div>
                 <div>
-                  <strong>Design the operating model</strong>
-                  <span>We shape the product around the real workflow, not an imagined ideal process.</span>
+                  <strong>Design the intelligent workflow</strong>
+                  <span>We shape the assistant, agent, automation, data flow, and user experience around the real process.</span>
                 </div>
               </div>
               <div class="step">
                 <div class="step-num">3</div>
                 <div>
-                  <strong>Ship for production</strong>
-                  <span>Infrastructure, interfaces, and AI behavior are built to be dependable from the start.</span>
+                  <strong>Build for production</strong>
+                  <span>We engineer the product with security, integrations, monitoring, scalability, and user adoption in mind.</span>
                 </div>
               </div>
             </div>
@@ -1318,9 +569,10 @@
 
           <div class="contact-card reveal delay-1">
             <div class="section-label">Get In Touch</div>
-            <h3>Let’s build something credible and useful.</h3>
+            <h3>Let’s build an AI system people can actually use.</h3>
             <p>
-              If you are modernizing an operation, exploring a product idea, or looking for an technology partner for cloud, AI, Salesforce, SaaS, automation, and digital transformation initiatives, start here.
+              If you are exploring an AI product, intelligent assistant, agentic workflow, automation platform, or
+              AI-enabled business system, start here.
             </p>
 
             <div class="contact-list">
@@ -1333,8 +585,8 @@
                 <a href="https://greennirvai.com">greennirvai.com</a>
               </div>
               <div class="contact-item">
-                <small>Location</small>
-                <span>United States</span>
+                <small>Focus</small>
+                <span>AI products, intelligent automation, and enterprise AI systems</span>
               </div>
               <div class="contact-item">
                 <small>Entity</small>
@@ -1353,12 +605,12 @@
         <div class="footer-bar">
           <div>
             <strong>Green Nirv AI Solutions</strong>
-            <div class="footer-note">Building cloud, AI, Salesforce, SaaS, and automation solutions that respect real work.</div>
+            <div class="footer-note">Building AI-first products, intelligent automation, and useful software systems.</div>
           </div>
           <div class="footer-links">
             <a href="#about">About</a>
-            <a href="#products">Solutions</a>
-            <a href="#capabilities">Capabilities</a>
+            <a href="#solutions">Solutions</a>
+            <a href="#capabilities">AI Capabilities</a>
             <a href="#contact">Contact</a>
           </div>
         </div>
