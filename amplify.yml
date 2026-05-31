@@ -3,12 +3,12 @@ frontend:
   phases:
     preBuild:
       commands:
-        - echo "No build step required for static site"
+        - mkdir -p web
     build:
       commands:
-        - echo "Publishing static files from repository root"
+        - cp index.html web/index.html
   artifacts:
-    baseDirectory: /
+    baseDirectory: web
     files:
       - '**/*'
   cache:
